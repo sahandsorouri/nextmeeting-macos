@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>NextMeeting</string>
+    <key>CFBundleDisplayName</key>
+    <string>NextMeeting</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.sahand.nextmeeting</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.0.1</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>NextMeeting</string>
+    <key>CFBundleIconFile</key>
+    <string>NextMeeting.icns</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <!-- Menu-bar-only agent: no Dock icon, no default window. -->
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <!-- Calendar permission prompt text (read-only, local). -->
+    <key>NSCalendarsUsageDescription</key>
+    <string>NextMeeting reads your calendar locally to show your next meeting. Nothing leaves your Mac.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>NextMeeting reads your calendar locally to show your next meeting. Nothing leaves your Mac.</string>
+    <!-- Local pre-meeting notifications (delivered on-device, no network). -->
+    <key>NSUserNotificationsUsageDescription</key>
+    <string>NextMeeting can remind you before a meeting starts. Reminders are scheduled locally.</string>
+</dict>
+</plist>
