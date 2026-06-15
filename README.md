@@ -27,10 +27,17 @@ NextMeeting reads your calendar through Apple's EventKit and keeps everything on
 
 1. Download the latest `NextMeeting-x.x.x.dmg` from [Releases](https://github.com/sahandsorouri/nextmeeting-macos/releases).
 2. Open the DMG and drag NextMeeting to Applications.
-3. First launch: right-click the app and choose **Open** (the app is ad-hoc signed, not notarized, so Gatekeeper shows a warning the first time only).
-4. Grant calendar access when prompted.
+3. Double-click NextMeeting. macOS will block it the first time, because the app is ad-hoc signed and not notarized (I have no Apple Developer account). This is expected, not a virus.
+4. Approve it once:
+   - **macOS 15 Sequoia:** open **System Settings → Privacy & Security**, scroll down to "NextMeeting was blocked to protect your Mac", click **Open Anyway**, then confirm with **Open Anyway** (Touch ID or password).
+   - **macOS 14 Sonoma:** right-click the app in Applications and choose **Open**, then **Open** again in the dialog.
+5. Grant calendar access when prompted.
+
+You only do this once. After that it opens normally.
 
 Requires macOS 14 or later.
+
+> Why the warning? The app never gets notarized by Apple, so macOS cannot auto-verify it. It runs fully on-device and makes no network calls. You can read every line of the source in this repo.
 
 ## Stack
 
