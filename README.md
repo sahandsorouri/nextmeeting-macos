@@ -1,51 +1,39 @@
+<img src="https://raw.githubusercontent.com/sahandsorouri/sahandsorouri/main/assets/banner.svg" alt="Sahand Sorouri" width="100%">
+
 # NextMeeting
 
-A compact macOS menu bar countdown to your next meeting. Reads your Apple Calendar, runs fully on-device, and never sends your data anywhere.
+A small macOS menu bar countdown to your next meeting, read from Apple Calendar, fully on your Mac.
 
-100% local and private. No account, no server, no network calls.
+No account, no server, no network calls.
 
-## Why I built it
+## What it does
 
-I used to rely on a menu bar meeting app, but it did not give me the flexibility I wanted, and I was never sure my calendar data stayed on my machine. So I built my own: it connects straight to Apple Calendar, keeps everything local, and adds the features I actually use every day.
-
-## Features
-
-- **Next meeting at a glance.** Compact menu bar label with a live countdown (`15m`, `1h 20m`, `Now`) and optional title.
-- **One-click join.** Detects meeting links (Zoom, Google Meet, Teams, Webex, Whereby, Around, Discord, Slack, Jitsi) across title, location, notes, and URL fields.
-- **Later list.** Upcoming meetings within your lookahead, each with its own countdown and join button.
-- **Pre-meeting alerts.** Native notifications 1, 5, or 10 minutes before a meeting. Off by default, fully on-device.
-- **Global join shortcut.** Join the next call from anywhere (default `Cmd+Shift+J`, customizable). No Accessibility permission required.
-- **Calendar picker.** Include or exclude any calendar.
-- **Flexible settings.** Lookahead (12h to 7d), show-in-bar threshold, refresh interval, 12h/24h time, title length, launch at login.
-- **Universal binary.** Native on both Apple Silicon and Intel.
+- **Next meeting at a glance:** a live countdown in the menu bar (`15m`, `1h 20m`, `Now`), with the title if you want it.
+- **One-click join:** finds meeting links (Zoom, Google Meet, Teams, Webex, Whereby, Around, Discord, Slack, Jitsi) in the title, location, notes and URL.
+- **Later list:** upcoming meetings, each with its own countdown and join button.
+- **Alerts:** native notifications 1, 5 or 10 minutes before a meeting (off by default).
+- **Join shortcut:** join the next call from anywhere (default `Cmd+Shift+J`), no Accessibility permission needed.
+- **Settings:** pick calendars, lookahead (12 hours to 7 days), refresh interval, 12 or 24 hour time, title length, launch at login.
 
 ## Privacy
 
-NextMeeting reads your calendar through Apple's EventKit and keeps everything on your Mac. There is no backend, no analytics, and no network access. Your schedule never leaves your laptop.
+NextMeeting reads your calendar through Apple's EventKit and keeps everything on your Mac. No backend, no analytics, no network access.
 
 ## Install
 
 1. Download the latest `NextMeeting-x.x.x.dmg` from [Releases](https://github.com/sahandsorouri/nextmeeting-macos/releases).
 2. Open the DMG and drag NextMeeting to Applications.
-3. Double-click NextMeeting. macOS will block it the first time, because the app is ad-hoc signed and not notarized (I have no Apple Developer account). This is expected, not a virus.
+3. Open NextMeeting. macOS blocks it the first time, because the app is not notarized by Apple. This is expected.
 4. Approve it once:
-   - **macOS 15 Sequoia:** open **System Settings → Privacy & Security**, scroll down to "NextMeeting was blocked to protect your Mac", click **Open Anyway**, then confirm with **Open Anyway** (Touch ID or password).
-   - **macOS 14 Sonoma:** right-click the app in Applications and choose **Open**, then **Open** again in the dialog.
-5. Grant calendar access when prompted.
+   - **macOS 15 Sequoia:** open **System Settings > Privacy & Security**, scroll to "NextMeeting was blocked to protect your Mac", click **Open Anyway** and confirm.
+   - **macOS 14 Sonoma:** right-click the app in Applications, choose **Open**, then **Open** again.
+5. Allow calendar access when asked.
 
-You only do this once. After that it opens normally.
-
-Requires macOS 14 or later.
-
-> Why the warning? The app never gets notarized by Apple, so macOS cannot auto-verify it. It runs fully on-device and makes no network calls. You can read every line of the source in this repo.
-
-## Stack
-
-`Swift` `SwiftUI (MenuBarExtra)` `EventKit` `SMAppService` `macOS 14+`
+After that it opens normally. Needs macOS 14 or later. Universal app for Apple Silicon and Intel.
 
 ## Build from source
 
-No full Xcode needed, just the Command Line Tools.
+Only the Command Line Tools are needed, not full Xcode.
 
 ```bash
 ./build.sh            # fast native dev build
@@ -54,6 +42,10 @@ No full Xcode needed, just the Command Line Tools.
 ./package_dmg.sh      # build a universal app and package the DMG
 ```
 
-## About
+## Tech
 
-Built by [Sahand Sorouri](https://github.com/sahandsorouri). Personal project, shared as-is.
+Swift, SwiftUI (MenuBarExtra), EventKit, SMAppService, macOS 14+.
+
+---
+
+Built by [Sahand Sorouri](https://sahand.sorouri.com) · platforms, bots and AI tools for businesses in Dubai.
